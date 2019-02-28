@@ -4,10 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.Rect
+import android.graphics.*
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
@@ -20,6 +17,7 @@ import android.util.Log
 import android.view.SurfaceHolder
 import java.util.*
 import java.util.concurrent.TimeUnit
+import kotlin.math.min
 
 class BusyFaceService : CanvasWatchFaceService() {
 
@@ -31,6 +29,7 @@ class BusyFaceService : CanvasWatchFaceService() {
 
     private val TAG = "BusyFaceService"
     private val UPDATE_RATE_MILLIS : Long = TimeUnit.SECONDS.toMillis(1)
+    private val TYPEFACE = Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL)
 
     override fun onCreateEngine(): Engine {
         return Engine()
@@ -40,6 +39,8 @@ class BusyFaceService : CanvasWatchFaceService() {
 
         private val MSG_UPDATE_TIME = 0
         private val calendar = Calendar.getInstance()
+        private val hourPaint = createTextPaint(Color.BLUE)
+        private val minutePaint = createTextPaint(Color.YELLOW)
 
         private var registeredTimeZoneReceiver = false
         private var centerX = 0.0f
@@ -77,6 +78,22 @@ class BusyFaceService : CanvasWatchFaceService() {
             setWatchFaceStyle(WatchFaceStyle.Builder(this@BusyFaceService).setAcceptsTapEvents(true).build())
 
             initializeBackground()
+
+            val textSize : Float = resources.getDimension(R.dimen.text_size)
+            hourPaint.textSize = textSize
+            minutePaint.textSize = textSize
+        }
+
+        private fun createTextPaint(defaultColor: Int) : Paint {
+            return createTextPaint(defaultColor, TYPEFACE)
+        }
+
+        private fun createTextPaint(defaultColor: Int, typeface: Typeface) : Paint {
+            val paint = Paint()
+            paint.color = defaultColor
+            paint.typeface = typeface
+            paint.isAntiAlias = true
+            return paint
         }
 
         private fun initializeComplications() {
@@ -169,9 +186,19 @@ class BusyFaceService : CanvasWatchFaceService() {
 
             ambient = isInAmbientMode
 
+            if (isInAmbientMode) {
+                hourPaint.color = Color.WHITE
+                minutePaint.color = Color.WHITE
+            } else {
+                hourPaint.color = Color.BLUE
+                minutePaint.color = Color.YELLOW
+            }
+
             complications.onAmbientModeChanged(inAmbientMode)
 
             updateTimer()
+
+            invalidate()
         }
 
         override fun onDraw(canvas: Canvas, bounds: Rect) {
@@ -179,6 +206,8 @@ class BusyFaceService : CanvasWatchFaceService() {
             calendar.timeInMillis = now
 
             drawBackground(canvas)
+
+            drawTime(canvas)
 
             complications.drawComplications(canvas, now)
         }
@@ -189,6 +218,18 @@ class BusyFaceService : CanvasWatchFaceService() {
             } else {
                 canvas.drawPaint(backgroundPaint)
             }
+        }
+
+        private fun drawTime(canvas: Canvas) {
+            val hourString = String.format("%02d", calendar.get(Calendar.HOUR_OF_DAY))
+            val minuteString = String.format("%02d", calendar.get(Calendar.MINUTE))
+            val minXOffset = 10f
+
+            var yOffset = ((canvas.height / 2f))
+            canvas.drawText(hourString, minXOffset, yOffset, hourPaint)
+
+            val xOffset = canvas.width - minXOffset - minutePaint.textSize
+            canvas.drawText(minuteString, xOffset, yOffset, minutePaint)
         }
 
         override fun onVisibilityChanged(visible: Boolean) {
