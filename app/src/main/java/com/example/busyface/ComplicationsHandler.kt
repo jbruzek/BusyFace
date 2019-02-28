@@ -21,7 +21,7 @@ class ComplicationsHandler(_numComplications: Int) {
 
     init {
         //populate the ids
-        for (i in 0..(numComplications - 1)) {
+        for (i in 0 until numComplications) {
             //TODO: better ids? Probably not necessary
             complicationIds[i] = i
         }

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/watch_face_background"
+        android:layout_width="@dimen/settings_preview_size"
+        android:layout_height="@dimen/settings_preview_size"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/settings_watch_face_preview_background"/>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/complications_view_wrapper">
+
+        <ImageView
+                android:id="@+id/v0_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+
+        <ImageView
+                android:id="@+id/v1_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/v0_bg"/>
+
+        <ImageView
+                android:id="@+id/v2_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/v1_bg"/>
+
+        <ImageView
+                android:id="@+id/v3_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/v2_bg"/>
+
+        <!-- next row -->
+
+        <ImageView
+                android:id="@+id/v4_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_bg"
+                android:layout_alignParentStart="true"/>
+
+        <ImageView
+                android:id="@+id/v5_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_bg"
+                android:layout_toRightOf="@+id/v4_bg"/>
+
+        <ImageView
+                android:id="@+id/v6_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_bg"
+                android:layout_toRightOf="@+id/v5_bg"/>
+
+        <ImageView
+                android:id="@+id/v7_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_bg"
+                android:layout_toRightOf="@+id/v6_bg"/>
+
+        <!-- next row -->
+
+        <ImageView
+                android:id="@+id/v8_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_bg"
+                android:layout_alignParentStart="true"/>
+
+        <ImageView
+                android:id="@+id/v9_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_bg"
+                android:layout_toRightOf="@+id/v8_bg"/>
+
+        <ImageView
+                android:id="@+id/v10_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_bg"
+                android:layout_toRightOf="@+id/v9_bg"/>
+
+        <ImageView
+                android:id="@+id/v11_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_bg"
+                android:layout_toRightOf="@+id/v10_bg"/>
+
+        <!-- next row -->
+
+        <ImageView
+                android:id="@+id/v12_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_bg"
+                android:layout_alignParentStart="true"/>
+
+        <ImageView
+                android:id="@+id/v13_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_bg"
+                android:layout_toRightOf="@+id/v12_bg"/>
+
+        <ImageView
+                android:id="@+id/v14_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_bg"
+                android:layout_toRightOf="@+id/v13_bg"/>
+
+        <ImageView
+                android:id="@+id/v15_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/added_complication"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_bg"
+                android:layout_toRightOf="@+id/v14_bg"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/complications_button_wrapper">
+
+        <ImageButton
+                android:id="@+id/v0_button"
+                android:tag="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+
+        <ImageButton
+                android:id="@+id/v1_button"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/v0_button"/>
+
+        <ImageButton
+                android:id="@+id/v2_button"
+                android:tag="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/v1_button"/>
+
+        <ImageButton
+                android:id="@+id/v3_button"
+                android:tag="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/v2_button"/>
+
+        <!-- next row -->
+
+        <ImageButton
+                android:id="@+id/v4_button"
+                android:tag="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_button"
+                android:layout_alignParentStart="true"/>
+
+        <ImageButton
+                android:id="@+id/v5_button"
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_button"
+                android:layout_toRightOf="@+id/v4_button"/>
+
+        <ImageButton
+                android:id="@+id/v6_button"
+                android:tag="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_button"
+                android:layout_toRightOf="@+id/v5_button"/>
+
+        <ImageButton
+                android:id="@+id/v7_button"
+                android:tag="7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v0_button"
+                android:layout_toRightOf="@+id/v6_button"/>
+
+        <!-- next row -->
+
+        <ImageButton
+                android:id="@+id/v8_button"
+                android:tag="8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_button"
+                android:layout_alignParentStart="true"/>
+
+        <ImageButton
+                android:id="@+id/v9_button"
+                android:tag="9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_button"
+                android:layout_toRightOf="@+id/v8_button"/>
+
+        <ImageButton
+                android:id="@+id/v10_button"
+                android:tag="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_button"
+                android:layout_toRightOf="@+id/v9_button"/>
+
+        <ImageButton
+                android:id="@+id/v11_button"
+                android:tag="11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v4_button"
+                android:layout_toRightOf="@+id/v10_button"/>
+
+        <!-- next row -->
+
+        <ImageButton
+                android:id="@+id/v12_button"
+                android:tag="12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_button"
+                android:layout_alignParentStart="true"/>
+
+        <ImageButton
+                android:id="@+id/v13_button"
+                android:tag="13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_button"
+                android:layout_toRightOf="@+id/v12_button"/>
+
+        <ImageButton
+                android:id="@+id/v14_button"
+                android:tag="14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_button"
+                android:layout_toRightOf="@+id/v13_button"/>
+
+        <ImageButton
+                android:id="@+id/v15_button"
+                android:tag="15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/v8_button"
+                android:layout_toRightOf="@+id/v14_button"/>
+
+
+        </RelativeLayout>
+</RelativeLayout>

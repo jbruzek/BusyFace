@@ -88,10 +88,11 @@ class BusyFaceService : CanvasWatchFaceService() {
                 ComplicationData.TYPE_SHORT_TEXT,
                 ComplicationData.TYPE_SMALL_IMAGE)
 
-            val drawable: ComplicationDrawable = getDrawable(R.drawable.custom_complication_styles) as ComplicationDrawable
-            drawable.setContext(applicationContext)
+            var drawable: ComplicationDrawable
 
-            for (id in 0..NUM_COMPLICATIONS) {
+            for (id in 0 until NUM_COMPLICATIONS) {
+                drawable = getDrawable(R.drawable.custom_complication_styles) as ComplicationDrawable
+                drawable.setContext(applicationContext)
                 complications.setComplicationSupportedTypes(id, dataTypes)
                 complications.putComplicationDrawable(id, drawable)
             }
@@ -118,14 +119,17 @@ class BusyFaceService : CanvasWatchFaceService() {
         private fun setComplicationsBounds(width: Int) {
             val complicationSize = width / 6
             var id = 0
+            var xOffset: Int
+            var yOffset: Int
+            var bounds: Rect
 
             for (i in 1..4) {
-                val yOffset = i * complicationSize
+                yOffset = i * complicationSize
 
                 for (j in 1..4) {
-                    val xOffset = j * complicationSize
+                    xOffset = j * complicationSize
 
-                    val bounds = Rect(xOffset, yOffset, xOffset + complicationSize, yOffset + complicationSize)
+                    bounds = Rect(xOffset, yOffset, xOffset + complicationSize, yOffset + complicationSize)
                     complications.setDrawableBounds(id, bounds)
                     id++
                 }
@@ -137,6 +141,22 @@ class BusyFaceService : CanvasWatchFaceService() {
             burnInProtection = properties.getBoolean(WatchFaceService.PROPERTY_BURN_IN_PROTECTION, false)
 
             complications.onPropertiesChanged(lowBitAmbient, burnInProtection)
+        }
+
+        override fun onComplicationDataUpdate(watchFaceComplicationId: Int, data: ComplicationData?) {
+            Log.d(TAG, "onComplicationDataUpdate")
+
+            complications.onComplicationDataUpdate(watchFaceComplicationId, data!!)
+
+            invalidate()
+        }
+
+        override fun onTapCommand(tapType: Int, x: Int, y: Int, eventTime: Long) {
+            Log.d(TAG, "onTapCommand")
+
+            if (tapType == WatchFaceService.TAP_TYPE_TAP) {
+                complications.processTap(x, y, applicationContext)
+            }
         }
 
         override fun onTimeTick() {
