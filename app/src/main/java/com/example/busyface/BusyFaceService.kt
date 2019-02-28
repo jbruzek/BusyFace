@@ -155,7 +155,7 @@ class BusyFaceService : CanvasWatchFaceService() {
             Log.d(TAG, "onTapCommand")
 
             if (tapType == WatchFaceService.TAP_TYPE_TAP) {
-                complications.processTap(x, y, applicationContext)
+                complications.processTap(x, y, applicationContext, this@BusyFaceService)
             }
         }
 

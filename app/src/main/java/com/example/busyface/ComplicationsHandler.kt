@@ -1,5 +1,6 @@
 package com.example.busyface
 
+import android.app.Activity
 import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
@@ -8,6 +9,7 @@ import android.graphics.Rect
 import android.support.wearable.complications.ComplicationData
 import android.support.wearable.complications.ComplicationHelperActivity
 import android.support.wearable.complications.rendering.ComplicationDrawable
+import android.support.wearable.watchface.WatchFaceService
 import android.util.Log
 import android.util.SparseArray
 
@@ -88,8 +90,12 @@ class ComplicationsHandler(_numComplications: Int) {
         return -1
     }
 
-    // Fires PendingIntent associated with complication (if it has one).
-    fun processTap(x: Int, y: Int, applicationContext: Context) {
+    /**
+     * Fires PendingIntent associated with complication (if it has one)
+     *
+     * Requires reference to service in order to request permissions
+     */
+    fun processTap(x: Int, y: Int, applicationContext: Context, caller: WatchFaceService) {
         Log.d(tag, "processTap()")
 
         val complicationId = getTappedComplicationId(x, y)
@@ -110,7 +116,7 @@ class ComplicationsHandler(_numComplications: Int) {
 
             } else if (complicationData.type == ComplicationData.TYPE_NO_PERMISSION) {
                 //launch permission request
-                val componentName = ComponentName(applicationContext, BusyFaceService::class.java)
+                val componentName = ComponentName(applicationContext, caller.javaClass.simpleName)
 
                 val permissionRequestIntent = ComplicationHelperActivity.createPermissionRequestHelperIntent(applicationContext, componentName)
 
@@ -153,13 +159,5 @@ class ComplicationsHandler(_numComplications: Int) {
 
     fun putComplicationDrawable(complicationId: Int, drawable: ComplicationDrawable) {
         complicationDrawables.put(complicationId, drawable)
-    }
-
-    fun getComplicationDrawable(complicationId: Int) : ComplicationDrawable {
-        return complicationDrawables.get(complicationId)
-    }
-
-    fun putComplicationData(complicationId: Int, data: ComplicationData) {
-        activeComplicationDatas.put(complicationId, data)
     }
 }
