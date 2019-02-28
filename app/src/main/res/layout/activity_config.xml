@@ -36,8 +36,8 @@
 
         <ImageView
                 android:id="@+id/v0_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
@@ -45,8 +45,8 @@
 
         <ImageView
                 android:id="@+id/v1_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
@@ -54,8 +54,8 @@
 
         <ImageView
                 android:id="@+id/v2_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
@@ -63,8 +63,8 @@
 
         <ImageView
                 android:id="@+id/v3_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
@@ -74,8 +74,8 @@
 
         <ImageView
                 android:id="@+id/v4_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_bg"
@@ -83,8 +83,8 @@
 
         <ImageView
                 android:id="@+id/v5_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_bg"
@@ -92,8 +92,8 @@
 
         <ImageView
                 android:id="@+id/v6_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_bg"
@@ -101,8 +101,8 @@
 
         <ImageView
                 android:id="@+id/v7_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_bg"
@@ -112,8 +112,8 @@
 
         <ImageView
                 android:id="@+id/v8_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_bg"
@@ -121,8 +121,8 @@
 
         <ImageView
                 android:id="@+id/v9_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_bg"
@@ -130,8 +130,8 @@
 
         <ImageView
                 android:id="@+id/v10_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_bg"
@@ -139,8 +139,8 @@
 
         <ImageView
                 android:id="@+id/v11_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_bg"
@@ -150,8 +150,8 @@
 
         <ImageView
                 android:id="@+id/v12_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_bg"
@@ -159,8 +159,8 @@
 
         <ImageView
                 android:id="@+id/v13_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_bg"
@@ -168,8 +168,8 @@
 
         <ImageView
                 android:id="@+id/v14_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_bg"
@@ -177,8 +177,8 @@
 
         <ImageView
                 android:id="@+id/v15_bg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:src="@drawable/added_complication"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_bg"
@@ -197,8 +197,8 @@
         <ImageButton
                 android:id="@+id/v0_button"
                 android:tag="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"/>
@@ -206,8 +206,8 @@
         <ImageButton
                 android:id="@+id/v1_button"
                 android:tag="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/v0_button"/>
@@ -215,8 +215,8 @@
         <ImageButton
                 android:id="@+id/v2_button"
                 android:tag="2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/v1_button"/>
@@ -224,8 +224,8 @@
         <ImageButton
                 android:id="@+id/v3_button"
                 android:tag="3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/v2_button"/>
@@ -235,8 +235,8 @@
         <ImageButton
                 android:id="@+id/v4_button"
                 android:tag="4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_button"
                 android:layout_alignParentStart="true"/>
@@ -244,8 +244,8 @@
         <ImageButton
                 android:id="@+id/v5_button"
                 android:tag="5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_button"
                 android:layout_toRightOf="@+id/v4_button"/>
@@ -253,8 +253,8 @@
         <ImageButton
                 android:id="@+id/v6_button"
                 android:tag="6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_button"
                 android:layout_toRightOf="@+id/v5_button"/>
@@ -262,8 +262,8 @@
         <ImageButton
                 android:id="@+id/v7_button"
                 android:tag="7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v0_button"
                 android:layout_toRightOf="@+id/v6_button"/>
@@ -273,8 +273,8 @@
         <ImageButton
                 android:id="@+id/v8_button"
                 android:tag="8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_button"
                 android:layout_alignParentStart="true"/>
@@ -282,8 +282,8 @@
         <ImageButton
                 android:id="@+id/v9_button"
                 android:tag="9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_button"
                 android:layout_toRightOf="@+id/v8_button"/>
@@ -291,8 +291,8 @@
         <ImageButton
                 android:id="@+id/v10_button"
                 android:tag="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_button"
                 android:layout_toRightOf="@+id/v9_button"/>
@@ -300,8 +300,8 @@
         <ImageButton
                 android:id="@+id/v11_button"
                 android:tag="11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v4_button"
                 android:layout_toRightOf="@+id/v10_button"/>
@@ -311,8 +311,8 @@
         <ImageButton
                 android:id="@+id/v12_button"
                 android:tag="12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_button"
                 android:layout_alignParentStart="true"/>
@@ -320,8 +320,8 @@
         <ImageButton
                 android:id="@+id/v13_button"
                 android:tag="13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_button"
                 android:layout_toRightOf="@+id/v12_button"/>
@@ -329,8 +329,8 @@
         <ImageButton
                 android:id="@+id/v14_button"
                 android:tag="14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_button"
                 android:layout_toRightOf="@+id/v13_button"/>
@@ -338,8 +338,8 @@
         <ImageButton
                 android:id="@+id/v15_button"
                 android:tag="15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/settings_unit_size"
+                android:layout_height="@dimen/settings_unit_size"
                 android:background="@android:color/transparent"
                 android:layout_below="@+id/v8_button"
                 android:layout_toRightOf="@+id/v14_button"/>

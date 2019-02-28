@@ -15,4 +15,5 @@
 -->
 <resources>
     <dimen name="settings_preview_size">180dp</dimen>
+    <dimen name="settings_unit_size">30dp</dimen>
 </resources>
