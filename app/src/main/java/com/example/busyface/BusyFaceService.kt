@@ -15,16 +15,16 @@ import android.support.wearable.watchface.WatchFaceService
 import android.support.wearable.watchface.WatchFaceStyle
 import android.util.Log
 import android.view.SurfaceHolder
+import util.ComplicationsHandler
 import java.util.*
 import java.util.concurrent.TimeUnit
-import kotlin.math.min
 
 class BusyFaceService : CanvasWatchFaceService() {
 
     companion object {
         const val NUM_COMPLICATIONS = 16
 
-        val complications : ComplicationsHandler = ComplicationsHandler(BusyFaceService.NUM_COMPLICATIONS)
+        val complications : ComplicationsHandler = ComplicationsHandler(NUM_COMPLICATIONS)
     }
 
     private val TAG = "BusyFaceService"
